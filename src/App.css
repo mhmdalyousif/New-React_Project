@@ -1,0 +1,5 @@
+@import "tailwindcss";
+/* In src/index.css or src/App.css */
+body {
+  font-family: 'nunito', sans-serif;
+}
