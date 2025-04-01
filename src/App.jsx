@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Product from "./components/Product";  // ✅ fix it 
+import Product from "./components/Product";  // ✅ Ensure uppercase
 import {
   createBrowserRouter,
   Outlet,
@@ -17,6 +16,7 @@ const Layout = () => {
   return (
     <div>
       <Header />
+      <ScrollRestoration />
       <Outlet />
       <Footer />
     </div>
@@ -31,14 +31,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: productsdata
+        loader: productsdata,
       },
       {
         path: "product/:id",
-        element: <product/>
+        element: <Product />,  // ✅ Fixed (Uppercase "Product")
       },
       {
-        path: "/cart",  // ✅ Ensure the path is correctly formatted (lowercase "cart")
+        path: "/cart",
         element: <Cart />,
       },
     ],

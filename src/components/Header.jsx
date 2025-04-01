@@ -2,14 +2,19 @@ import React from "react";
 import LogoDark from "../assets/LogoDark.svg"; // Correct path and extension
 import Cart from "../assets/Cart.jpg"
 import cart2 from "../assets/cart2.webp"
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   return (
     <div className="w-full h-25 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50 ">
       <div className="max-w-screen-x1 h-full mx-auto flex items-center justify-between">
+        
+        <Link to="/">
         <div>
           <img className="w-30 h-[90px]" src={LogoDark} alt="LogoDark" />
         </div>
+        </Link>
 
         <div className="flex items-center gap-8 ">
           <ul className="flex items-center gap-8 ">
